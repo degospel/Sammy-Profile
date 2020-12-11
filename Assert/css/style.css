@@ -13,6 +13,7 @@ html{
     --white-color: #fafaff;
     --dark-color: #2a3b47;
     --text-color: #697477;
+    --background-color: #eee;
     --body-font: 'Montserrat', sans-serif;
     --big-font-size: 6.25rem;
     --h2-font-size: 1.25rem !important;
@@ -23,6 +24,16 @@ html{
     --mb-3: 1.5rem;
     --mb-4: 2rem;
     --z-fixed: 100;
+    --blend-mode: normal;
+}
+
+.dark-theme{
+    --first-color: #5361ff;
+    --white-color: #fafaff;
+    --dark-color: #f1faee;
+    --text-color: #afafaf;
+    --background-color: #181621;
+    --blend-mode: lighten;
 }
 
 body{
@@ -32,6 +43,7 @@ body{
     font-weight: var(--font-medium);
     color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--background-color);
 }
 
 @media screen and (min-width: 768px){
@@ -151,6 +163,24 @@ img{
     color: var(--white-color);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.toggle-btn{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 2px solid var(--dark-color);
+    display: flex;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.toggle-btn i{
+    color: var(--dark-color);
+    margin: auto;
+    font-size: 1rem;
 }
 
 /* SHOW MENU */
@@ -300,9 +330,9 @@ img{
 }
 
 /* PORTFOLIO */
-.portfolio{
+/* .portfolio{
     background-color: var(--white-color);
-}
+} */
 
 .portfolio_container{
     justify-items: center;
@@ -387,7 +417,7 @@ img{
 
 /* FOOTER */
 .footer{
-    background-color: var(--dark-color);
+    border-top: 1px solid var(--dark-color);
 }
 
 .footer_container{
@@ -396,7 +426,7 @@ img{
 
 .footer_title{
     font-size: var(--normal-font-size);
-    color: var(--white-color);
+    color: var(--first-color);
     margin-bottom: var(--mb-2);
 }
 
